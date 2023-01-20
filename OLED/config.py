@@ -34,9 +34,9 @@ import spidev
 import ctypes
 
 # Pin definition
-RST_PIN         = 27
-DC_PIN          = 25
-CS_PIN          = 8
+RST_PIN         = 13
+DC_PIN          = 22
+CS_PIN          = 24
 
 Device_SPI = 1
 Device_I2C = 0
@@ -60,8 +60,6 @@ def i2c_writebyte(reg, value):
    
 def module_init():
     #print("module_init")
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(False)
     GPIO.setup(RST_PIN, GPIO.OUT)
     GPIO.setup(DC_PIN, GPIO.OUT)
     GPIO.setup(CS_PIN, GPIO.OUT)  

@@ -30,7 +30,6 @@
 from . import config
 import RPi.GPIO as GPIO
 import time
-import numpy as np
 
 Device_SPI = config.Device_SPI
 Device_I2C = config.Device_I2C
